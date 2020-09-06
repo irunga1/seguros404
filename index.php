@@ -54,12 +54,13 @@
  * NOTE: If you change these, also change the error_reporting() code below
  */
 	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');  //
-	define('dbconfig',array(
-		"host"=>'34.236.86.81',
-		"user"=>'userseguros',
-		"pass"=>'Cremas2020$$',
-		"dbname"=>'seguros_404'
-	));
+	require_once("dbconfig.php");
+	// define('dbconfig',array(
+	// 	"host"=>'34.236.86.81',
+	// 	"user"=>'userseguros',
+	// 	"pass"=>'Cremas2020$$',
+	// 	"dbname"=>'seguros_404'
+	// ));
 
 /*
  *---------------------------------------------------------------
