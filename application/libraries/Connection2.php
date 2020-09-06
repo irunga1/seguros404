@@ -7,13 +7,8 @@ class Conection2{
     private $isConected;
     private $return1;
 
-    public function __construct(){        
-		// dbconfig["host"],
-		// dbconfig["user"],
-		// dbconfig["pass"],
-		// dbconfig["dbname"],
-         
-        $this->arrayCon['DATABASE']  = dbconfig["host"];
+    public function __construct(){            
+        $this->arrayCon['DATABASE']  = dbconfig["host"]; //
         $this->arrayCon['UID']    = dbconfig["user"];
         $this->arrayCon['PWD']    =dbconfig["pass"];
         $this->conn = mysqli_connect($this->arrayCon["DATABASE"],$this->arrayCon["UID"],$this->arrayCon["PWD"],dbconfig["dbname"]);

@@ -8,7 +8,7 @@
 		private $return1;	
 		public function __construct(){        
 			//$this->server = 
-			$this->arrayCon['DATABASE']  = dbconfig["host"];
+			$this->arrayCon['DATABASE']  = dbconfig["host"];  //
 			$this->arrayCon['UID']    = dbconfig["user"];
 			$this->arrayCon['PWD']    =dbconfig["pass"];
 			$this->conn = mysqli_connect($this->arrayCon["DATABASE"],$this->arrayCon["UID"],$this->arrayCon["PWD"],dbconfig["dbname"]);

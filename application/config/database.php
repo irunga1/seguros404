@@ -76,7 +76,7 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => dbconfig["host"],
+	'hostname' => dbconfig["host"],  //
 	'username' => dbconfig["user"],
 	'password' => dbconfig["pass"],
 	'database' => dbconfig["dbname"],

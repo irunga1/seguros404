@@ -53,7 +53,7 @@
  *
  * NOTE: If you change these, also change the error_reporting() code below
  */
-	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');
+	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');  //
 	define('dbconfig',array(
 		"host"=>'seguros-404.cil3mmdlp78p.us-east-2.rds.amazonaws.com',
 		"user"=>'admin',
