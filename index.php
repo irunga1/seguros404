@@ -1,3 +1,4 @@
+
 <?php
 /**
  * CodeIgniter
@@ -58,7 +59,7 @@
 	// define('dbconfig',array(
 	// 	"host"=>'34.236.86.81',
 	// 	"user"=>'userseguros',
-	// 	"pass"=>'Cremas2020$$',
+	//	"pass"=>'Cremas2020$$',
 	// 	"dbname"=>'seguros_404'
 	// ));
 
