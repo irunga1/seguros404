@@ -8,11 +8,15 @@ class Conection2{
     private $return1;
 
     public function __construct(){        
+		// dbconfig["host"],
+		// dbconfig["user"],
+		// dbconfig["pass"],
+		// dbconfig["dbname"],
          
-        $this->arrayCon['DATABASE']  = "seguros-404.cil3mmdlp78p.us-east-2.rds.amazonaws.com";
-        $this->arrayCon['UID']    = "admin";
-        $this->arrayCon['PWD']    ="Cremas$$";
-        $this->conn = mysqli_connect($this->arrayCon["DATABASE"],$this->arrayCon["UID"],$this->arrayCon["PWD"],'sincom_seguros');
+        $this->arrayCon['DATABASE']  = dbconfig["host"];
+        $this->arrayCon['UID']    = dbconfig["user"];
+        $this->arrayCon['PWD']    =dbconfig["pass"];
+        $this->conn = mysqli_connect($this->arrayCon["DATABASE"],$this->arrayCon["UID"],$this->arrayCon["PWD"],dbconfig["dbname"]);
         if( $this->conn ) {
             $this->isConected = true;
         }
