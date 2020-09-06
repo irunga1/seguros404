@@ -34,7 +34,7 @@
 					if($this->isConected == true){
 						$data = mysqli_query($this->conn,$queryString);
 						echo "<pre>";
-						print_r($data);
+						print_r($queryString);
 						echo "<pre>";
 
 						$this->return1 = mysqli_fetch_all($data);
