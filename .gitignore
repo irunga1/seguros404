@@ -1,5 +1,7 @@
 .DS_Store
 
+/public/img/captcha
+
 application/cache/*
 !application/cache/index.html
 
@@ -29,3 +31,5 @@ user_guide_src/cilexer/pycilexer.egg-info/*
 *.sublime-project
 /tests/tests/
 /tests/results/
+
+

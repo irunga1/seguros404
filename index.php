@@ -55,10 +55,10 @@
  */
 	define('ENVIRONMENT', isset($_SERVER['CI_ENV']) ? $_SERVER['CI_ENV'] : 'development');  //
 	define('dbconfig',array(
-		"host"=>'seguros-404.cil3mmdlp78p.us-east-2.rds.amazonaws.com',
-		"user"=>'admin',
-		"pass"=>'Cremas$$',
-		"dbname"=>'sincom_seguros'
+		"host"=>'34.236.86.81',
+		"user"=>'userseguros',
+		"pass"=>'Cremas2020$$',
+		"dbname"=>'seguros_404'
 	));
 
 /*
