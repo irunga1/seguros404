@@ -46,15 +46,15 @@
         </div>
     <br>
     <br>
-    <footer>
-        <?php $this->load->view("client_footer"); ?>
-    </footer>
+    <!-- <footer>
+        <?php //$this->load->view("client_footer"); ?>
+    </footer> -->
 </body>
 </html>
 <style>
 header, footer{
     min-height:45px;
-    background-color:#E5B029;
+    background-color:#45D33F;
 }
 body{
     
@@ -70,5 +70,13 @@ footer {
 #logo{
     max-width:200px;
     width:30%;
+}
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    background-color: #042141;
+    color: #fff;
 }
 </style>

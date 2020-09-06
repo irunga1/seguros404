@@ -7,11 +7,10 @@
 		private $isConected;
 		private $return1;	
 		public function __construct(){        
-			//$this->server = 
-			$this->arrayCon['DATABASE']  = dbconfig["host"];  //
-			$this->arrayCon['UID']    = dbconfig["user"];
-			$this->arrayCon['PWD']    =dbconfig["pass"];
-			$this->conn = mysqli_connect($this->arrayCon["DATABASE"],$this->arrayCon["UID"],$this->arrayCon["PWD"],dbconfig["dbname"]);
+			$this->arrayCon['DATABASE']  = "34.236.86.81";
+			$this->arrayCon['UID']    = "userseguros";
+			$this->arrayCon['PWD']    ="Cremas2020$$";
+			$this->conn = mysqli_connect($this->arrayCon["DATABASE"],$this->arrayCon["UID"],$this->arrayCon["PWD"],'seguros_404');
 			if( $this->conn ) {
 				$this->isConected = true;
 			}
@@ -21,8 +20,7 @@
 		}
 		public function reconect(){
 			$this->isConected = true;
-			$this->conn = mysqli_connect($this->arrayCon["DATABASE"],$this->arrayCon["UID"],$this->arrayCon["PWD"],'sincom_seguros');
-
+			$this->conn = mysqli_connect($this->arrayCon["DATABASE"],$this->arrayCon["UID"],$this->arrayCon["PWD"],'seguros_404');
 		}
 		public function runQuery($queryString){
 			try {

@@ -1,4 +1,4 @@
-<img id="logo" src="https://protegemos.com.gt/wp-content/uploads/2019/05/cropped-LOGO-peque%C3%B1o-1.png" alt="">
+<img id="logo" src="<?php echo base_url("assets/uploads/files/logo1.jpg") ?>" alt="">
 <!-- <h1>Protegemos</h1> -->
 <style>
 /* header {    

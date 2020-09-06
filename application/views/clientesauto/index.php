@@ -1,6 +1,6 @@
-<h1>
+<h3>
 	Formulario Cotización
-</h1>
+</h3>
 <!-- <form action="" method="post"> -->
 <?php
 // echo "<pre>";
@@ -33,8 +33,8 @@
 
 <div class="form-group">
 	<div class="row">
-		<div class="col-md-3"><label for="">Nombre <span class="asterisco">*</span></label></div>
-		<div class="col-md-9">
+		<div class="col-md-2"><label for="">Nombre <span class="asterisco">*</span></label></div>
+		<div class="col-md-6">
 			<div class="input-group">
 				<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 				<input required type="text" name="Nombre" maxlength="145" class="form-control" id="Nombre"
@@ -46,8 +46,8 @@
 </div>
 <div class="form-group">
 	<div class="row">
-		<div class="col-md-3"><label for="">Nit <span class="asterisco">*</span></label></div>
-		<div class="col-md-9">
+		<div class="col-md-2"><label for="">Nit <span class="asterisco">*</span></label></div>
+		<div class="col-md-6">
 			<div class="input-group">
 
 				<span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i></span>
@@ -60,8 +60,8 @@
 </div>
 <div class="form-group">
 	<div class="row">
-		<div class="col-md-3"><label for="">Email <span class="asterisco">*</span></label></div>
-		<div class="col-md-9">
+		<div class="col-md-2"><label for="">Email <span class="asterisco">*</span></label></div>
+		<div class="col-md-6">
 			<div class="input-group">
 				<span class="input-group-addon">@</span>
 				<input required type="email" name="Email" class="form-control" id="Email" placeholder="Ingrese Correo" value="<?php echo (isset($post))?$post["Email"]:"" ?>">
@@ -71,8 +71,8 @@
 </div>
 <div class="form-group">
 	<div class="row">
-		<div class="col-md-3"><label for="">Teléfono <span class="asterisco">*</span></label></div>
-		<div class="col-md-9">
+		<div class="col-md-2"><label for="">Teléfono <span class="asterisco">*</span></label></div>
+		<div class="col-md-6">
 			<div class="input-group">
 				<span class="input-group-addon">#</span>
 				<input required type="tel" name="telefono" class="form-control" maxlength="10" id="telefono" placeholder="Ingrese Numero de Teléfono" value="<?php echo (isset($post))?$post["telefono"]:"" ?>">
@@ -82,8 +82,8 @@
 </div>
 <div class="form-group">
 	<div class="row">
-		<div class="col-md-3"><label for="">Tipo de Vehículo <span class="asterisco">*</span></label></div>
-		<div class="col-md-9">
+		<div class="col-md-2"><label for="">T. Vehículo <span class="asterisco">*</span></label></div>
+		<div class="col-md-6">
 			<div class="input-group">
 				<span class="input-group-addon"><i class="glyphicon glyphicon-plus-sign"></i></span>
 				<select required name="Tipovehiculo" id="make" class="form-control">
@@ -105,8 +105,8 @@
 </div>
 <div class="form-group">
 	<div class="row">
-		<div class="col-md-3"><label for="">Marca <span class="asterisco">*</span></label></div>
-		<div class="col-md-9">
+		<div class="col-md-2"><label for="">Marca <span class="asterisco">*</span></label></div>
+		<div class="col-md-6">
 			<div class="input-group">
 				<span class="input-group-addon"><i class="glyphicon glyphicon-plus-sign"></i></span>
 				<select required name="Marca" id="make" class="form-control">
@@ -132,8 +132,8 @@
 
 <div class="form-group">
 	<div class="row">
-		<div class="col-md-3"><label for="">Línea <span class="asterisco">*</span></label></div>
-		<div class="col-md-9">
+		<div class="col-md-2"><label for="">Línea <span class="asterisco">*</span></label></div>
+		<div class="col-md-6">
 
 			<div class="input-group">
 
@@ -149,8 +149,8 @@
 
 <div class="form-group">
 	<div class="row">
-		<div class="col-md-3"><label for="">Modelo <span class="asterisco">*</span></label></div>
-		<div class="col-md-9">
+		<div class="col-md-2"><label for="">Modelo <span class="asterisco">*</span></label></div>
+		<div class="col-md-6">
 			<div class="input-group">
 				<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 				<select name="Modelo" id="Modelo" class ="form-control">
@@ -175,8 +175,8 @@
 </div>
 <div class="form-group">
 	<div class="row">
-		<div class="col-md-3"><label for="">Valor <span class="asterisco">*</span> </label></div>
-		<div class="col-md-9">
+		<div class="col-md-2"><label for="">Valor <span class="asterisco">*</span> </label></div>
+		<div class="col-md-6">
 			<div class="input-group">
 				<span class="input-group-addon">Q</span>
 				<input required type="text" name="Valor" maxlength="14" class="form-control" id="Valor"
@@ -187,8 +187,8 @@
 </div>
 <div class="form-group">
 	<div class="row">
-		<div class="col-md-3"></div>
-		<div class="col-md-9">
+		<div class="col-md-2"></div>
+		<div class="col-md-6">
 			<?php 
 			$cont=0;
 			foreach($clasesguro as $it){
@@ -209,7 +209,7 @@
 
 <div class="form-group">
 	<div class="row">
-		<div class="col-md-3"><label for="">Captcha <span class="asterisco">*</span></label></div>
+		<div class="col-md-2"><label for="">Captcha <span class="asterisco">*</span></label></div>
 		<div class="col-md-2">
 			<?php         
             $captcha = $this->captcha->generateString(); 
@@ -217,16 +217,16 @@
             $this->captcha->generateImage(base_url());
         ?>
 		</div>
-		<div class="col-md-3">
+		<div class="col-md-2">
 			<div class="input-group">
 				<span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
 				<input required type="text" name="captcha" maxlength="8" class="form-control" id="Valor"
 					placeholder="Ingrese el valor de la  imagen">
 			</div>
 		</div>
-        <div class="col-md-3">
+        <div class="col-md-2">
                 <button class="btn btn-info" id="enviar">
-                    <i class="glyphicon glyphicon-cloud-upload"></i> Solicitar Cotización
+                    <i class="glyphicon glyphicon-cloud-upload"></i> Cotiza ya
                 </button>
         </div>
 	</div>

@@ -151,6 +151,7 @@ class Clienteautos extends CI_Controller{
 				$data['iab'] = $this->cam->getIAB($idcot);
 				// $data["beneficios"][$title] = $temp[$title];
 				$data["cob2"] = $this->con2->runQuery("CALL obtiene_cotizacion_seleccionada_cobertura($idcot)");
+				
 				$secciones= $this->con2->runQuery("CALL obtiene_cotizacion_seleccionada_seccionab($idcot)");
 				$keys = $this->util->getKeys2($secciones,14);
 				foreach($keys as $it){

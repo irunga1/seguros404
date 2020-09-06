@@ -14,7 +14,7 @@
 	<div class="container-fluid" >
 			
 		<div class="top" style="width:17.2cm" >
-			<img src="./assets/uploads/files/logo1.jpg" alt="" >
+			<img src="./assets/uploads/files/logo1.jpg" alt="" style = "height:75px" >
 			<!-- <img src="https://protegemos.com.gt/wp-content/uploads/2019/05/cropped-LOGO-peque%C3%B1o-1.png" alt="" > -->
 			
 			
@@ -92,7 +92,7 @@
 					$size2 = count($calculado);	
 					$personal[0]->clase_seguro = trim($personal[0]->clase_seguro);
 					$display =($personal[0]->clase_seguro=="Seguro Terceros")?"display:none!important;":"";
-					$isMargin = ($size>2)?"margin-top:-1.5cm;":"margin-top:1cm";
+					$isMargin = ($size>2)?"margin-top:-1cm;":"margin-top:1cm";
 					$isCol1 = (count($calculado) > 1)?"Comparativo de ":"";
 
 					echo "<div style='$isMargin'><span style=' font-size:19px!important; font-weight:700!important;';padding-top:0cm;>$isCol1 Coberturas y Beneficios</span></div>";
@@ -399,8 +399,8 @@
 		width:100%;
 	}
 	.top {
-		height: 50px;
-		border: 15px solid  #E5B029 !important;
+		height: 75px;
+		border: 15px solid  #45D33F !important;
 		position: relative;
 		width: 18cm;
 	}
