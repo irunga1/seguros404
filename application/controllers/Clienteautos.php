@@ -16,7 +16,7 @@ class Clienteautos extends CI_Controller{
         $data['marcas'] = $this->cam->getAutos();
         $data['clasesguro'] = $this->cam->getClaseSeguro();
         $data['tipovehiculo'] = $this->cam->getTipoVehiculo();
-        $data['view'] = "clientesauto/index";        
+        $data['view'] = "clientesauto/index2";        
         $data['breadcrumb'] = "Inicio,Dashboard";
 		$data['title'] = "Protegemos - Cotización";
 		$data['year'] = date("Y")+2;
@@ -45,7 +45,7 @@ class Clienteautos extends CI_Controller{
         $this->form_validation->set_rules('Modelo', 'Modelo', 'trim|required|min_length[4]|max_length[4]|integer');        
         $this->form_validation->set_rules('Valor', 'Valor', 'trim|required|min_length[4]|max_length[16]');        
         $this->form_validation->set_rules('clase_seguro', 'Tipo de Seguro', 'trim|required|min_length[2]|max_length[40]|alpha_numeric_spaces');        
-		$this->form_validation->set_rules('captcha', 'captcha', 'trim|required|min_length[5]|max_length[6]|alpha_numeric');
+		//$this->form_validation->set_rules('captcha', 'captcha', 'trim|required|min_length[5]|max_length[6]|alpha_numeric');
 		$this->form_validation->set_rules('telefono', 'Teléfono', 'trim|required|min_length[8]|max_length[10]|integer');
 		$this->form_validation->set_rules('Nit', 'Nit', 'trim|required|min_length[8]|max_length[9]|regex_match[/^([kK0-9])+$/i]');
         
@@ -64,8 +64,8 @@ class Clienteautos extends CI_Controller{
 			if($post["clase_seguro"] =="Seguro Terceros"){
 				$post["Valor"] =0;
 			}
-			$post["captcha"] = $this->clearstring->getValue($post['captcha']);
-            if($post['captcha'] ==$this->session->userdata["captcha"]){
+			// /* $post["captcha"] = $this->clearstring->getValue($post['captcha']); */
+            // if($post['captcha'] ==$this->session->userdata["captcha"]){
                 $data = [
                     "nombre"=>$post["Nombre"],
                     "email"=>$post["Email"],
@@ -95,13 +95,13 @@ class Clienteautos extends CI_Controller{
 
 				
                 $this->load->view("client", $data);
-            }
-            else{
-				$datos = $data;
-                $datos['error'] = 'Error en el captcha | Intente Nuevamente';
-                $datos['post'] = $post;
-                $this->load->view('client',$datos);                
-            }
+            // }
+            // else{
+			// 	$datos = $data;
+            //     $datos['error'] = 'Error en el captcha | Intente Nuevamente';
+            //     $datos['post'] = $post;
+            //     $this->load->view('client',$datos);                
+            // }
 
         }
         else{

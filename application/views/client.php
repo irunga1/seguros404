@@ -33,9 +33,7 @@
                 <p></p>
                 <p></p>
                 <p></p>
-                    <p>
-                        Con este formulario usted podrá obtener diversas cotización para su automovil.
-                    </p>
+
                     
                 </div>
                 <div class="col-md-8">
@@ -52,6 +50,9 @@
 </body>
 </html>
 <style>
+body{
+	background-color: #042141;
+}
 header, footer{
     min-height:45px;
     background-color:#45D33F;
