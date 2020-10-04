@@ -59,7 +59,7 @@
 
 <div class="tab">
 	<h5>Datos del Vehiculo</h5>
-	<label for="">T. Vehículo <span class="asterisco">*</span></label>
+	<label for="">Tipo Vehículo <span class="asterisco">*</span></label>
 	<div class="input-group">
 		<span class="input-group-addon"><i class="glyphicon glyphicon-plus-sign"></i></span>
 		<select required name="Tipovehiculo" id="make" class="form-control">
@@ -160,7 +160,7 @@
 				</div>
 			</div> -->
 			<div class="col-md-">
-				<button class="btn btn-info col-md-12" id="enviar">
+				<button class="btn btn-info col-md-3" id="enviar">
 					<i class="glyphicon glyphicon-cloud-upload"></i> Cotiza ya
 				</button>
 			</div>
@@ -172,8 +172,8 @@
 
 <div style="overflow:auto;">
 	<div style="float:right;margin-top: 10px;">
-		<button type="button" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
-		<button type="button" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
+		<button type="button" class="btn btn-success" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
+		<button type="button" class="btn btn-success" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
 	</div>
 </div>
 

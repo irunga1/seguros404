@@ -1,6 +1,7 @@
 <h1>
-	Tus Posibles Aseguradoras
+	Aseguradoras que te pordian interesar
 </h1>
+<small>Puedes seleccionar 3 como máximo.</small>
 <br>
 <?php
 // echo "<pre>";
@@ -15,7 +16,13 @@
     foreach($result as $it){ ?>
 	<div class="row item">
 		<div class="col-md-3">
+			<br>
 			<img class="listimg" src="<?php echo base_url("assets/uploads/files/$it->logotipo"); ?>" alt="">
+			<hr>
+			<small>Comparar</small><br>
+			<input value="<?php echo$it->aseguradora_id; ?>" aseguradora="<?php echo$it->aseguradora_id; ?>"
+				type="checkbox" name="aseguradora" id="as-<?php echo $x ?>" class="compare" value="1"
+				tiposeguro="<?php echo $it->tiposeguro_id; ?>" tipotarifa="<?php echo $it->tipotarifa_id; ?>">
 		</div>
 		<div class="col-md-6">
 			<h3><?php echo $it->nombre ; ?> </h3>
@@ -25,19 +32,22 @@
 				<br> -->
 			<?php $primatotal2 = $it->primatotal/10; $primatotal2 = number_format($primatotal2, 2, '.', ', '); ?>	
 			<strog>Precio Contado: Q </strong><?php echo number_format($it->precio_contado, 2, '.', ',');   ?>
-				<span pagos="<?php echo $primatotal2;  ?>"  pma="<?php echo number_format($it->precio_contado, 2, '.', ',');?>" tiposeguro="<?php echo $it->tiposeguro_id; ?>" tipotarifa="<?php echo $it->tipotarifa_id; ?>"
+				<!-- <span pagos="<?php echo $primatotal2;  ?>"  pma="<?php echo number_format($it->precio_contado, 2, '.', ',');?>" tiposeguro="<?php echo $it->tiposeguro_id; ?>" tipotarifa="<?php echo $it->tipotarifa_id; ?>"
 					ase="<?php echo$it->aseguradora_id; ?>" class="btn btn-success btn-sm btncomprar"
-					data-toggle="modal" data-target="#exampleModal" aseg="<?php echo $it->nombre; ?>">Comprar</span>
+					data-toggle="modal" data-target="#exampleModal" aseg="<?php echo $it->nombre; ?>">Comprar</span> -->
 
 		</div>
 		<div class="col-md-3">
 			<br>
 			<?php $primatotal = $it->primatotal/10; $primatotal = number_format($primatotal, 2, '.', ', '); ?>
 			<small><strong>10 pagos de <br> Q. <?php echo $primatotal; ?> </strong></small><br><br>
-			<small>Comparar</small><br>
+			<span pagos="<?php echo $primatotal2;  ?>"  pma="<?php echo number_format($it->precio_contado, 2, '.', ',');?>" tiposeguro="<?php echo $it->tiposeguro_id; ?>" tipotarifa="<?php echo $it->tipotarifa_id; ?>"
+					ase="<?php echo$it->aseguradora_id; ?>" class="btn btn-success btn-sm btncomprar"
+					data-toggle="modal" data-target="#exampleModal" aseg="<?php echo $it->nombre; ?>">Comprar</span>
+			<!-- <small>Comparar</small><br>
 			<input value="<?php echo$it->aseguradora_id; ?>" aseguradora="<?php echo$it->aseguradora_id; ?>"
 				type="checkbox" name="aseguradora" id="as-<?php echo $x ?>" class="compare" value="1"
-				tiposeguro="<?php echo $it->tiposeguro_id; ?>" tipotarifa="<?php echo $it->tipotarifa_id; ?>">
+				tiposeguro="<?php echo $it->tiposeguro_id; ?>" tipotarifa="<?php echo $it->tipotarifa_id; ?>"> -->
 
 		</div>
 	</div>
@@ -49,7 +59,7 @@
 			<input value="<?php echo $cotid; ?>" type="hidden" id="cotid">
 			<input value="" type="hidden" id="clase_seguro">
 			<a style="width:15%" href="<?php echo base_url("clienteautos/index") ?>" class="btn btn-danger"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> </a>
-			<button style="width:75%; font-weight:700"  class="btn btn-info" id="comBtn">Comparar</button>
+			<button style="width:15%; font-weight:700"  class="btn btn-info" id="comBtn">Comparar</button>
 			
 		</div>
 	</div>
@@ -61,7 +71,8 @@
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
-			<img id="logo" src="https://protegemos.com.gt/wp-content/uploads/2019/05/cropped-LOGO-peque%C3%B1o-1.png" alt="">
+			<!-- <img id="logo" src="https://protegemos.com.gt/wp-content/uploads/2019/05/cropped-LOGO-peque%C3%B1o-1.png" alt=""> -->
+				 <h2 style="display: inline;">Excelente Opción</h2>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -333,5 +344,12 @@
 	}
 	.error{
 		border:1px solid red;
+	}
+	.modal-content label{
+		color:#042141;
+
+	}
+	.modal-content{
+		background-color: sienna;
 	}
 </style>

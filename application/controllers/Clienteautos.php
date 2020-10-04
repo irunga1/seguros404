@@ -18,7 +18,7 @@ class Clienteautos extends CI_Controller{
         $data['tipovehiculo'] = $this->cam->getTipoVehiculo();
         $data['view'] = "clientesauto/index2";        
         $data['breadcrumb'] = "Inicio,Dashboard";
-		$data['title'] = "Protegemos - Cotización";
+		$data['title'] = "Automovil Seguros - Cotizador";
 		$data['year'] = date("Y")+2;
         // echo "<pre>";
         // print_r($data);die();
@@ -33,7 +33,7 @@ class Clienteautos extends CI_Controller{
         $data['tipovehiculo'] = $this->cam->getTipoVehiculo();
         $data['view'] = "clientesauto/index";        
         $data['breadcrumb'] = "Inicio,Dashboard";
-        $data['title'] = "Protegemos - Cotización";
+        $data['title'] = "Automovil Seguros - Cotizador";
         $data['year'] = date("Y")+2;
         $post = $this->input->post(NULL, TRUE);
         $post2 = $this->input->post(NULL, TRUE);
