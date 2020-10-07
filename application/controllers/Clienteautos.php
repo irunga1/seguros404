@@ -12,7 +12,7 @@ class Clienteautos extends CI_Controller{
     }
     public function index(){
 		// echo   'http://'.$_SERVER['HTTP_HOST'];die();
-
+		show_error();
         $data['marcas'] = $this->cam->getAutos();
         $data['clasesguro'] = $this->cam->getClaseSeguro();
         $data['tipovehiculo'] = $this->cam->getTipoVehiculo();
