@@ -257,12 +257,14 @@ class Clienteautos extends CI_Controller{
                 // $this->email->to($object[0]->email);
                 // $this->email->to("irunga1@yahoo.com");
                 $this->email->to($send1);
-                $this->email->subject('Cotizador Auto Protegemos.');
+                $this->email->subject('Auto Insurance -  Info.');
                 $this->email->message('
                     <p>Estimado  Sr. (a) '. $data["personal"][0]->nombre.':</p>
-					<p>Reciba un cordial saludo de <strong>GRUPO PROTEGEMOS, S.A.</strong>, por medio de la presente le damos la más cordial bienvenida, agradeciendo la confianza depositada en nosotros para la contratación de su póliza de automóvil de '.$data["calculado"][0]->nombre.'.</p>
-					<p>En breve uno de nuestros ejecutivos de servicio se estará contactando con usted para enviarle los requisitos para la emisión de su póliza</p>
-					<p>Cualquier duda o información adicional puede comunicarse al siguiente número  telefónico: 2327-8888
+					<p>Reciba un cordial saludo de<strong>XX</strong>, 
+					We hereby give you the most cordial welcome, thanking the trust placed in us for the contracting of your automobile policy of '.$data["calculado"][0]->nombre.'.</p>
+					<p>Shortly one of our service executives will be contacting you to send you the requirements for the issuance of your policy
+					</p>
+					<p>Any questions or additional information can be communicated to the following telephone number: 2327-8888
 						</p>
 					<p style="text-align:center">	</p>
 					<br><br>

@@ -1,13 +1,13 @@
 <h1>
-	Aseguradoras que te pordian interesar
+	Check out this list insurance 
 </h1>
-<small>Puedes seleccionar 3 como máximo.</small>
+<small>You can only compare 3 options.</small>
 <br>
 <?php
 // echo "<pre>";
 // print_r($result);
  ?>
-<div class="continer-fluid">
+<div class="continer-fluid"> 
 	<?php 
 	$x = 1;
 
@@ -40,7 +40,7 @@
 		<div class="col-md-3">
 			<br>
 			<?php $primatotal = $it->primatotal/10; $primatotal = number_format($primatotal, 2, '.', ', '); ?>
-			<small><strong>10 pagos de <br> Q. <?php echo $primatotal; ?> </strong></small><br><br>
+			<small><strong>10 payments of <br> $. <?php echo $primatotal; ?> </strong></small><br><br>
 			<span pagos="<?php echo $primatotal2;  ?>"  pma="<?php echo number_format($it->precio_contado, 2, '.', ',');?>" tiposeguro="<?php echo $it->tiposeguro_id; ?>" tipotarifa="<?php echo $it->tipotarifa_id; ?>"
 					ase="<?php echo$it->aseguradora_id; ?>" class="btn btn-success btn-sm btncomprar"
 					data-toggle="modal" data-target="#exampleModal" aseg="<?php echo $it->nombre; ?>">Comprar</span>
@@ -59,7 +59,7 @@
 			<input value="<?php echo $cotid; ?>" type="hidden" id="cotid">
 			<input value="" type="hidden" id="clase_seguro">
 			<a style="width:15%" href="<?php echo base_url("clienteautos/index") ?>" class="btn btn-danger"><span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span> </a>
-			<button style="width:15%; font-weight:700"  class="btn btn-info" id="comBtn">Comparar</button>
+			<button style="width:15%; font-weight:700"  class="btn btn-info" id="comBtn">Compare</button>
 			
 		</div>
 	</div>
@@ -72,7 +72,7 @@
 		<div class="modal-content">
 			<div class="modal-header">
 			<!-- <img id="logo" src="https://protegemos.com.gt/wp-content/uploads/2019/05/cropped-LOGO-peque%C3%B1o-1.png" alt=""> -->
-				 <h2 style="display: inline;">Excelente Opción</h2>
+				 <h2 style="display: inline;">Nice Choice </h2>
 				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 					<span aria-hidden="true">&times;</span>
 				</button>
@@ -80,18 +80,18 @@
 
 			</div>
 			<div class="modal-body">
-				Gracias <strong><?php echo $post["Nombre"] ?></strong>  por preferirnos, por favor confirma los siguientes datos de la compra en <span id="aseg"></span>. <br>
+				Thanks <strong><?php echo $post["Nombre"] ?></strong>  for prefeer our brands. Please confirm this data <span id="aseg"></span>. <br>
 				<div class="formContainer">
 					<div class="row nRow">
 						<div class="col-md-3">
-							<label for="">*Nombre: </label></div>
+							<label for="">*Name: </label></div>
 						<div class="col-md-9">
 							<input placeholder="al menos 3 caractres" maxlength="60" id="Nombre"  value ="<?php echo $post["Nombre"]; ?>" type="text" class="form-control" required  > 
 						</div>
 					</div>
 					<div class="row nRow">
 						<div class="col-md-3">
-							<label for="">*Email: </label>
+							<label for="">*E-mail: </label>
 						</div>
 						<div class="col-md-9">
 							<input maxlength="100" id="Email" type="email" class="form-control" value ="<?php echo $post["Email"]; ?>" required > 
@@ -99,7 +99,7 @@
 					</div>
 					<div class="row nRow">
 						<div class="col-md-3">
-							<label for="">*Teléfono: </label>
+							<label for="">*Phone Number: </label>
 						</div>
 						<div class="col-md-9">
 							<input placeholder="al menos 8 caractres" maxlength="10" id="Telefono" type="text" class="form-control" value ="<?php echo $post["telefono"]; ?>" required  > 
@@ -115,11 +115,11 @@
 					</div>
 
 					<div class="row nRow">
-						<div class="col-md-3"><label for="">Tipo de Tarifa: </label></div>
+						<div class="col-md-3"><label for="">Rate: </label></div>
 						<div class="col-md-9"><input type="text" class="form-control nhov" value ="<?php echo $post["clase_seguro"]; ?>" readonly> </div>
 					</div>
 					
-					<h4>Datos del Vehículo</h4>
+					<h4>Vehicle info</h4>
 					<div class="row">
 						<div class="col-md-3">
 							<div class="form-group">
@@ -128,27 +128,27 @@
 						</div>
 						<div class="col-md-3">
 							<div class="form-group">
-								<label for="">Marca: </label> <input type="text" class="form-control nhov" value ="<?php echo $post2[0][6]; ?>" readonly > 
+								<label for="">Brand: </label> <input type="text" class="form-control nhov" value ="<?php echo $post2[0][6]; ?>" readonly > 
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="form-group">
-								<label for="">Modelo: </label> <input type="text" class="form-control nhov" value ="<?php echo $post["Modelo"]; ?>" readonly > 
+								<label for="">Model: </label> <input type="text" class="form-control nhov" value ="<?php echo $post["Modelo"]; ?>" readonly > 
 							</div>
 						</div>
 						<div class="col-md-3">
 							<div class="form-group">
-								<label for="">Línea: </label> <input type="text" class="form-control nhov" value ="<?php echo $post["Linea"]; ?>" readonly > 
+								<label for="">Líne: </label> <input type="text" class="form-control nhov" value ="<?php echo $post["Linea"]; ?>" readonly > 
 							</div> 
 						</div>
 					</div>
 					<div class="row nRow">
 						<div class="col-md-6">
-							<label for="">Prima Total de Contado: </label>
+							<label for="">Total Cash: </label>
 							<input id="pma" type="text" class="form-control nhov" value ="<?php echo $post2[0][10]; ?>" readonly>
 						</div>
 						<div class="col-md-6">
-							<label for="">10 Pagos Mensuales: </label>
+							<label for="">Ten Monthly payments: </label>
 							<input id="pagos" type="text" class="form-control nhov" value ="10" readonly>
 						</div>
 						

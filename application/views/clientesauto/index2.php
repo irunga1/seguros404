@@ -26,40 +26,40 @@
 
 <?php $attributes = array('class' => 'segurosauto', 'id' => 'segurosauto');     echo form_open(base_url("clienteautos/indexpost"), $attributes); ?>
 
-<h3>Cotiza aca:</h3>
+<h3>Quote here:</h3>
 
 <!-- One "tab" for each step in the form: -->
 <div class="tab">
-	<h5>Datos Personales</h5>
-	<label for="">Nombre <span class="asterisco">*</span></label>
+	<h5>Personal Info</h5>
+	<label for="">Name <span class="asterisco">*</span></label>
 	<div class="input-group">
 		<span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
 		<input required type="text" name="Nombre" maxlength="145" class="form-control" id="Nombre"
-			placeholder="Ingrese Nombre" value="<?php echo (isset($post))?$post["Nombre"]:"" ?>">
+			placeholder="Name" value="<?php echo (isset($post))?$post["Nombre"]:"" ?>">
 	</div>
-	<label for="">Nit <span class="asterisco">*</span></label>
+	<label for="">T.I.N <span class="asterisco">*</span></label>
 	<div class="input-group">
 		<span class="input-group-addon"><i class="glyphicon glyphicon-edit"></i></span>
 		<input required type="text" name="Nit" maxlength="8" class="form-control" id="Nit"
-			placeholder="Ingrese N.I.T. sin guiones" value="<?php echo (isset($post))?$post["Nit"]:"" ?>">
+			placeholder="T.I.N" value="<?php echo (isset($post))?$post["Nit"]:"" ?>">
 	</div>
-	<label for="">Email <span class="asterisco">*</span></label>
+	<label for="">E-mail <span class="asterisco">*</span></label>
 	<div class="input-group">
 		<span class="input-group-addon">@</span>
-		<input required type="email" name="Email" class="form-control" id="Email" placeholder="Ingrese Correo"
+		<input required type="email" name="Email" class="form-control" id="Email" placeholder="Email"
 			value="<?php echo (isset($post))?$post["Email"]:"" ?>">
 	</div>
-	<label for="">Teléfono <span class="asterisco">*</span></label>
+	<label for="">Phone Number <span class="asterisco">*</span></label>
 	<div class="input-group">
 		<span class="input-group-addon">#</span>
 		<input required type="tel" name="telefono" class="form-control" maxlength="10" id="telefono"
-			placeholder="Ingrese Numero de Teléfono" value="<?php echo (isset($post))?$post["telefono"]:"" ?>">
+			placeholder="Phone Number" value="<?php echo (isset($post))?$post["telefono"]:"" ?>">
 	</div>
 </div>
 
 <div class="tab">
-	<h5>Datos del Vehiculo</h5>
-	<label for="">Tipo Vehículo <span class="asterisco">*</span></label>
+	<h5>Vehicle Info</h5>
+	<label for="">Body Type<span class="asterisco">*</span></label>
 	<div class="input-group">
 		<span class="input-group-addon"><i class="glyphicon glyphicon-plus-sign"></i></span>
 		<select required name="Tipovehiculo" id="make" class="form-control">
@@ -77,7 +77,7 @@
 		</select>
 	</div>
 
-	<label for="">Marca <span class="asterisco">*</span></label>
+	<label for="">Brand <span class="asterisco">*</span></label>
 	<div class="input-group">
 		<span class="input-group-addon"><i class="glyphicon glyphicon-plus-sign"></i></span>
 		<select required name="Marca" id="make" class="form-control">
@@ -95,14 +95,14 @@
                     ?>
 		</select>
 	</div>
-	<label for="">Línea <span class="asterisco">*</span></label>
+	<label for="">Line <span class="asterisco">*</span></label>
 	<div class="input-group">
 
 		<span class="input-group-addon"><i class="glyphicon glyphicon-folder-open"></i></span>
 		<input required type="text" name="Linea" maxlength="50" class="form-control" id="Linea"
-			placeholder="Ingrese Linea" value="<?php echo (isset($post))?$post["Linea"]:"" ?>">
+			placeholder="Line" value="<?php echo (isset($post))?$post["Linea"]:"" ?>">
 	</div>
-	<label for="">Modelo <span class="asterisco">*</span></label>
+	<label for="">Model <span class="asterisco">*</span></label>
 	<div class="input-group">
 		<span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
 		<select name="Modelo" id="Modelo" class="form-control">
@@ -123,9 +123,9 @@
 	</div>
 	<label for="">Valor <span class="asterisco">*</span> </label>
 	<div class="input-group">
-		<span class="input-group-addon">Q</span>
+		<span class="input-group-addon">$</span>
 		<input required type="text" name="Valor" maxlength="14" class="form-control" id="Valor"
-			placeholder="Ingrese Valor" value="<?php echo (isset($post))?$post["Valor"]:"" ?>">
+			placeholder="Value" value="<?php echo (isset($post))?$post["Valor"]:"" ?>">
 	</div>
 	<div class="form-group">
 		<?php 
@@ -161,7 +161,7 @@
 			</div> -->
 			<div class="col-md-">
 				<button class="btn btn-info col-md-3" id="enviar">
-					<i class="glyphicon glyphicon-cloud-upload"></i> Cotiza ya
+					<i class="glyphicon glyphicon-cloud-upload"></i> Quote Now
 				</button>
 			</div>
 		</div>
@@ -172,8 +172,8 @@
 
 <div style="overflow:auto;">
 	<div style="float:right;margin-top: 10px;">
-		<button type="button" class="btn btn-success" id="prevBtn" onclick="nextPrev(-1)">Anterior</button>
-		<button type="button" class="btn btn-success" id="nextBtn" onclick="nextPrev(1)">Siguiente</button>
+		<button type="button" class="btn btn-success" id="prevBtn" onclick="nextPrev(-1)">Prev</button>
+		<button type="button" class="btn btn-success" id="nextBtn" onclick="nextPrev(1)">Next</button>
 	</div>
 </div>
 
@@ -343,7 +343,7 @@
 		if (n == (x.length - 1)) {
 			document.getElementById("nextBtn").style.display = "none";
 		} else {
-			document.getElementById("nextBtn").innerHTML = "Siguiente";
+			document.getElementById("nextBtn").innerHTML = "Next";
 		}
 		// ... and run a function that displays the correct step indicator:
 		fixStepIndicator(n)

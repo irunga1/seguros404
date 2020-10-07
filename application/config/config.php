@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://'.$_SERVER['HTTP_HOST'].'/seguros404';//local
+$config['base_url'] = 'http://'.$_SERVER['HTTP_HOST'].'/insurance404';//local
 // $config['base_url'] = 'http://localhost/seguros404';//dev
 // $config['base_url'] = 'http://localhost/seguros404';//prod
 
