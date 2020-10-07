@@ -31,7 +31,7 @@ class Clienteautos extends CI_Controller{
         $data['marcas'] = $this->cam->getAutos();
         $data['clasesguro'] = $this->cam->getClaseSeguro();
         $data['tipovehiculo'] = $this->cam->getTipoVehiculo();
-        $data['view'] = "clientesauto/index";        
+        $data['view'] = "clientesauto/index2";        
         $data['breadcrumb'] = "Inicio,Dashboard";
         $data['title'] = "Automovil Seguros - Cotizador";
         $data['year'] = date("Y")+2;
@@ -95,19 +95,13 @@ class Clienteautos extends CI_Controller{
 
 				
                 $this->load->view("client", $data);
-            // }
-            // else{
-			// 	$datos = $data;
-            //     $datos['error'] = 'Error en el captcha | Intente Nuevamente';
-            //     $datos['post'] = $post;
-            //     $this->load->view('client',$datos);                
-            // }
+
 
         }
         else{
 			//$this->session->mark_as_flash('Usuario o Contraseña Invalida');                
 			$data['post'] = $post2;
-			$data['error'] = 'Datos Incorrectos ';
+			$data['error'] = 'Wrong Data ';
 			
             $this->load->view('client',$data);
         }
