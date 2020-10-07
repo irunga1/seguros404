@@ -22,16 +22,16 @@
 		<section class="max">
 			
 			<div style="display:block; height: 1.5cm; ">
-				<span style='font-size:18px; font-weight:700;' >Cotización Presentada a:</span>
+				<span style='font-size:18px; font-weight:700;' >Quote Submitted to:</span>
 			</div>
 			<div class="mycol mycol-4" style ='height:3.5cm'>
-				<div><input class ="info" type="text"  value ="Nombre" ></div>
-				<div><input class ="info" type="text"  value ="Correo" ></div>
+				<div><input class ="info" type="text"  value ="Name" ></div>
+				<div><input class ="info" type="text"  value ="E-Mail" ></div>
 				<!-- <div><input class ="info" type="text"  value ="Numero Proforma" ></div> -->
-				<div><input class ="info" type="text"  value ="Marca del Vehículo" ></div>
-				<div><input class ="info" type="text"  value ="Tipo de Vehículo" ></div>
-				<div><input class ="info" type="text"  value ="Valor del Vehículo" ></div>
-				<div><input class ="info" type="text"  value ="Tipo de Seguro" ></div>
+				<div><input class ="info" type="text"  value ="Brand" ></div>
+				<div><input class ="info" type="text"  value ="Body Type" ></div>
+				<div><input class ="info" type="text"  value ="Value" ></div>
+				<div><input class ="info" type="text"  value ="Insurance Type" ></div>
 			</div>
 			<div class="mycol mycol-4" style ='height:3.5cm'>
 				
@@ -45,9 +45,9 @@
 				<div><input class="info" type="text" value="<?php echo $personal[0]->clase_seguro; ?>"></div>
 			</div>			
 			<div class="mycol mycol-4" style ='height:3.5cm'>
-				<div><input class="info" type="text" value="Cotización: <?php echo $personal[0]->idcot ;?>"></div>
-				<div><input class="info" type="text" value="Fecha :<?php echo date("d-m-Y") ;?> "></div>
-				<div><input class="info" type="text" value="Contáctanos al: <?php echo $personal[0]->telefono;?>"></div>
+				<div><input class="info" type="text" value="Quotation: <?php echo $personal[0]->idcot ;?>"></div>
+				<div><input class="info" type="text" value="Date :<?php echo date("d-m-Y") ;?> "></div>
+				<div><input class="info" type="text" value="Contact us  : <?php echo $personal[0]->telefono;?>"></div>
 				<div><input class="info" type="text" value="<?php echo $personal[0]->mail;?>"></div>
 			</div>			
 		</section>		
@@ -95,10 +95,10 @@
 					$isMargin = ($size>2)?"margin-top:-1cm;":"margin-top:1cm";
 					$isCol1 = (count($calculado) > 1)?"Comparativo de ":"";
 
-					echo "<div style='$isMargin'><span style=' font-size:19px!important; font-weight:700!important;';padding-top:0cm;>$isCol1 Coberturas y Beneficios</span></div>";
+					echo "<div style='$isMargin'><span style=' font-size:19px!important; font-weight:700!important;';padding-top:0cm;>$isCol1 Coverages and Benefits</span></div>";
 					echo "<table class='tabla' style='$display width:18cm; '>";
 					echo"<tr>";
-					echo"<td style= 'border:0px solid white;padding-top:2px; line-height:21px; '><span style='font-size:19px!important; font-weight:700!important';padding-top:1cm;>Seccion IAB</span></td>";
+					echo"<td style= 'border:0px solid white;padding-top:2px; line-height:21px; '><span style='font-size:19px!important; font-weight:700!important';padding-top:1cm;>Section IAB</span></td>";
 					echo"</tr>";			
 						if($size2 ==1){
 							echo "<tr>";
@@ -163,7 +163,7 @@
 
 					echo "<table class='tabla' style='width:18cm; '>";
 					echo"<tr>";
-					echo"<td style= 'border:0px solid white;padding-top:2px; line-height:21px; '><span style='font-size:19px!important; font-weight:700!important';padding-top:1cm;>Seccion IIAB</span></td>";
+					echo"<td style= 'border:0px solid white;padding-top:2px; line-height:21px; '><span style='font-size:19px!important; font-weight:700!important';padding-top:1cm;>Section IIAB</span></td>";
 					echo"</tr>";
 						if(($size2 ==1) && ($personal[0]->clase_seguro=="Seguro Terceros") ){
 							echo "<tr>";
@@ -225,7 +225,7 @@
 
 					echo "<table class='tabla' style='width:18cm; '>";
 					echo"<tr>";
-					echo"<td style= 'border:0px solid white;padding-top:2px; line-height:21px; '><br><span style='font-size:19px!important; font-weight:700!important';padding-top:1cm;>Seccion IIIAB</span></td>";
+					echo"<td style= 'border:0px solid white;padding-top:2px; line-height:21px; '><br><span style='font-size:19px!important; font-weight:700!important';padding-top:1cm;>Section IIIAB</span></td>";
 					echo"</tr>";
 						// if($size2 ==1){
 						// 	echo "<tr>";
@@ -297,7 +297,7 @@
 
 					echo "<table class='tabla' style='width:18cm; '>";
 					echo"<tr>";
-					echo"<td style= 'border:0px solid white;padding-top:2px; line-height:21px; '><br><span style='font-size:19px!important; font-weight:700!important';padding-top:1cm;>Otros Beneficios</span></td>";
+					echo"<td style= 'border:0px solid white;padding-top:2px; line-height:21px; '><br><span style='font-size:19px!important; font-weight:700!important';padding-top:1cm;>Other Benefits</span></td>";
 					echo"</tr>";
 						if($size2 ==1){
 							echo "<tr>";

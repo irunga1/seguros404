@@ -31,7 +31,7 @@
                 <strog>Prima Total: Q </strong><?php echo number_format($it->primatotal, 2, '.', ', ');   ?>
 				<br> -->
 			<?php $primatotal2 = $it->primatotal/10; $primatotal2 = number_format($primatotal2, 2, '.', ', '); ?>	
-			<strog>Precio Contado: Q </strong><?php echo number_format($it->precio_contado, 2, '.', ',');   ?>
+			<strog>Cash price $: </strong><?php echo number_format($it->precio_contado, 2, '.', ',');   ?>
 				<!-- <span pagos="<?php echo $primatotal2;  ?>"  pma="<?php echo number_format($it->precio_contado, 2, '.', ',');?>" tiposeguro="<?php echo $it->tiposeguro_id; ?>" tipotarifa="<?php echo $it->tipotarifa_id; ?>"
 					ase="<?php echo$it->aseguradora_id; ?>" class="btn btn-success btn-sm btncomprar"
 					data-toggle="modal" data-target="#exampleModal" aseg="<?php echo $it->nombre; ?>">Comprar</span> -->
