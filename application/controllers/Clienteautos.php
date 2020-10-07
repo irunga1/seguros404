@@ -11,7 +11,7 @@ class Clienteautos extends CI_Controller{
 		$this->load->model("Clientesauto_model","cam");
     }
     public function index(){
-		echo   'http://'.$_SERVER['HTTP_HOST'];die();
+		// echo   'http://'.$_SERVER['HTTP_HOST'];die();
 		
         $data['marcas'] = $this->cam->getAutos();
         $data['clasesguro'] = $this->cam->getClaseSeguro();
